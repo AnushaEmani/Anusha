@@ -69,8 +69,11 @@ public class StepDefinitions extends TestRunner {
 
     @When("go to cart")
     public void go_to_cart() throws InterruptedException {
-        driver.navigate().refresh();
+        //driver.navigate().refresh();
         shoppingCartPage.gotoShoppingCartPage();
+        Thread.sleep(3000);
+        driver.navigate().refresh();
+
     }
 
     @When("checkout from the cart")
